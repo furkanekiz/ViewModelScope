@@ -14,7 +14,7 @@ class ACMain : AppCompatActivity() {
         setContentView(R.layout.ac_main)
 
         acMainViewModel = ViewModelProvider(this)[(ACMainViewModel::class.java)]
-        acMainViewModel.getUserData()
+        //acMainViewModel.getUserData()
         acMainViewModel.users.observe(this) {myUsers->
             myUsers?.forEach {
                 Log.i("MyTag","name is ${it.name}")
